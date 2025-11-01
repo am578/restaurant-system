@@ -33,11 +33,12 @@ public class AccueilRestaurant {
                     ConfirmOrder.confirmOrder();
                     break;
                 case 5:
-                    System.out.println("Thank you for visiting Pleasure Restaurant!");
-                    break;
+                    System.out.println("Redirecting to the final menu...");
+                    Main.main(null); // Call the final menu with Return Home / Logout
+                    return; // Exit current main to avoid duplicate loops
                 default:
                     System.out.println("Invalid option!");
             }
-        } while (choice != 5);
+        } while (true); // Keep looping until user chooses logout in Main.java
     }
 }
